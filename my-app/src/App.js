@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
   const [userChoice, setUserChoice] = useState(null);
@@ -37,6 +38,21 @@ function App() {
       <button onClick={() => handleUserChoice("✌")}>✌</button>
       <button onClick={() => handleUserChoice("✊")}>✊</button>
       <button onClick={() => handleUserChoice("🖐")}>🖐</button>
+
+      <div className="wave" />
+      {result && <div className="result">{result}</div>}
+      {result === "이겼습니다!" && (
+        <div className="fireworks">
+          <img src="https://www.animatedimages.org/data/media/710/animated-fireworks-image-0042.gif" alt="firework" />
+          <img src="https://www.animatedimages.org/data/media/710/animated-fireworks-image-0042.gif" alt="firework" />
+          <img src="https://www.animatedimages.org/data/media/710/animated-fireworks-image-0042.gif" alt="firework" />
+          <img src="https://www.animatedimages.org/data/media/710/animated-fireworks-image-0042.gif" alt="firework" />
+          
+          <img src="https://www.animatedimages.org/data/media/710/animated-fireworks-image-0069.gif" alt="firework" />
+          <img src="https://www.animatedimages.org/data/media/710/animated-fireworks-image-0056.gif" alt="firework" />
+          <img src="https://www.animatedimages.org/data/media/710/animated-fireworks-image-0052.gif" alt="firework" />
+        </div>
+      )}
     </div>
   );
 }
